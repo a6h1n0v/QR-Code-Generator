@@ -1,0 +1,138 @@
+/* Body background and centering */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Light blue to dark blue gradient */
+}
+
+/* Centered container with box style */
+.container {
+  background-color: #ffffff;
+  padding: 2rem 3rem; /* Increased width padding, reduced height padding */
+  border-radius: 1rem; /* Responsive border radius */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Increased width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto; /* Allow height to adjust automatically */
+}
+
+/* Title style with gradient text */
+.title {
+  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+  font-size: 2rem; /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-supporting browsers */
+}
+
+/* Styling QR code container */
+.qr-code {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Input section styling */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.input-section p {
+  font-size: 1.125rem; /* Responsive font size */
+  color: #34495e;
+  margin-bottom: 0.75rem;
+}
+
+/* Input box styling */
+.input-box {
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 24rem; /* Responsive max width */
+  border-radius: 0.5rem;
+  border: 1px solid #d1d8e0;
+  font-size: 1rem; /* Responsive font size */
+  background-color: #eef5f9;
+  color: #2c3e50;
+  box-shadow: inset 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-box:focus {
+  background-color: #ffffff;
+  border-color: #36d1dc;
+}
+
+/* Color picker styling */
+.color-picker {
+  margin: 0.75rem 0;
+  width: 3.75rem; /* Responsive width */
+  height: 3.75rem; /* Responsive height */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.color-picker:hover {
+  transform: scale(1.1);
+}
+
+/* Download button styling */
+.download-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: #ffffff;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1rem; /* Responsive font size */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(45deg, #218838, #17a2b8);
+  transform: scale(1.05);
+}
+
+.download-btn:disabled {
+  background: #d1d8e0;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+  .container {
+      padding: 1rem 1.5rem; /* Adjust padding for smaller screens */
+      max-width: 90vw; /* Ensure the container fits well on small screens */
+  }
+
+  .title {
+      font-size: 1.5rem;
+  }
+
+  .input-box {
+      font-size: 0.875rem;
+  }
+}
